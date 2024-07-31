@@ -11,7 +11,17 @@
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
 </head>
-<body>
+<body class="dark-mode">
+    <!-- Dark Mode Toggle -->
+    <div class="toggle-button" id="toggle-mode">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Lightbulb_icon.png/1024px-Lightbulb_icon.png" alt="Toggle Mode">
+    </div>
+
+    <!-- Cog Icon -->
+    <div class="cog-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Cog_icon_%28Font_Awesome%29.svg/1024px-Cog_icon_%28Font_Awesome%29.svg.png" alt="Settings">
+    </div>
+
     <header>
         <div>
             <h1>stats.mf</h1>
@@ -21,14 +31,6 @@
                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact">Contact</a>
                 <a class="nav-link" id="upload-tab" href="https://grabify.link/S61A1N">Upload</a>
             </div>
-        </div>
-        <button class="profile-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            ⚙️
-        </button>
-        <div class="dropdown-menu dropdown-menu-right">
-            <a class="dropdown-item" href="#">Profile</a>
-            <a class="dropdown-item" href="#">Settings</a>
-            <a class="dropdown-item" href="#">Logout</a>
         </div>
     </header>
 
@@ -80,9 +82,19 @@
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 stats.mf. All rights reserved.</p>
     </footer>
+
+    <!-- Background Animation -->
+    <div class="background-animation">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
