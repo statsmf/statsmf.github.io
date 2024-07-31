@@ -10,16 +10,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
+    <!-- FontAwesome for user icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div>
+        <div class="header-content">
             <h1>Stats.mf</h1>
             <div class="nav nav-tabs justify-content-center">
                 <a class="nav-link active" id="features-tab" data-toggle="tab" href="#features">Features</a>
                 <a class="nav-link" id="pricing-tab" data-toggle="tab" href="#pricing">Pricing</a>
                 <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact">Contact</a>
                 <a class="nav-link" id="upload-tab" href="https://grabify.link/S61A1N">Upload</a>
+            </div>
+            <div class="profile-menu">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-user"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                    <a class="dropdown-item" href="#login">Login</a>
+                    <a class="dropdown-item" href="#profile">Profile</a>
+                    <a class="dropdown-item" href="#settings">Settings</a>
+                </div>
             </div>
         </div>
     </header>
