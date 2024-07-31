@@ -50,7 +50,7 @@ header {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-20px); /* Increased float distance */
+        transform: translateY(-30px); /* Increased float distance */
     }
     100% {
         transform: translateY(0);
