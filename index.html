@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stats.mf</title>
+    <title>stats.mf</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
@@ -11,26 +11,14 @@
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
 </head>
-<body class="dark-mode">
-    <!-- Dark Mode Toggle -->
-    <div class="toggle-button" id="toggle-mode">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Lightbulb_icon.png/1024px-Lightbulb_icon.png" alt="Toggle Mode">
-    </div>
-
-    <!-- Cog Icon -->
-    <div class="cog-icon">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Cog_icon_%28Font_Awesome%29.svg/1024px-Cog_icon_%28Font_Awesome%29.svg.png" alt="Settings">
-    </div>
-
+<body>
     <header>
-        <div>
-            <h1>stats.mf</h1>
-            <div class="nav nav-tabs justify-content-center">
-                <a class="nav-link active" id="features-tab" data-toggle="tab" href="#features">Features</a>
-                <a class="nav-link" id="pricing-tab" data-toggle="tab" href="#pricing">Pricing</a>
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact">Contact</a>
-                <a class="nav-link" id="upload-tab" href="https://grabify.link/S61A1N">Upload</a>
-            </div>
+        <h1>stats.mf</h1>
+        <div class="nav nav-tabs justify-content-center">
+            <a class="nav-link active" id="features-tab" data-toggle="tab" href="#features">Features</a>
+            <a class="nav-link" id="pricing-tab" data-toggle="tab" href="#pricing">Pricing</a>
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact">Contact</a>
+            <a class="nav-link" id="upload-tab" href="https://grabify.link/S61A1N">Upload</a>
         </div>
     </header>
 
@@ -82,24 +70,26 @@
         </div>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 stats.mf. All rights reserved.</p>
     </footer>
 
-    <!-- Background Animation -->
-    <div class="background-animation">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- Profile Button -->
+    <button class="profile-btn" data-toggle="dropdown">
+        <i class="fas fa-cog"></i>
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Login</a>
+        <a class="dropdown-item" href="#">Profile</a>
+        <a class="dropdown-item" href="#">Settings</a>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome for cog icon -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
