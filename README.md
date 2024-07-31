@@ -1,8 +1,1 @@
-# statsmf.github.io
-# statsmf.github.io
-# statsmf.github.io
-# statsmf.github.io
-# statsmf.github.io
-# statsmf.github.io
-# statsmf.github.io
-# statsmf.github.io
+copyright tb 2024
