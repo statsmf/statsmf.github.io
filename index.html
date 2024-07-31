@@ -4,51 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stats.mf</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
         }
         header {
-            background-color: #333;
-            color: #fff;
+            background-color: #343a40;
+            color: #ffffff;
             padding: 20px 0;
-            text-align: center;
         }
         header h1 {
             margin: 0;
         }
-        nav {
-            margin: 20px auto;
-            text-align: center;
-        }
         nav a {
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             margin: 0 15px;
             font-size: 18px;
         }
         .hero {
             background: url('https://images.unsplash.com/photo-1506748686214e9df14f4b4d6b2b20b7a61d59d5d3c8?fit=crop&w=2000&h=800') no-repeat center center/cover;
-            color: #fff;
+            color: #ffffff;
             text-align: center;
             padding: 100px 20px;
         }
         .hero h2 {
             font-size: 3em;
             margin: 0;
+            font-weight: 700;
         }
         .hero p {
             font-size: 1.5em;
             margin: 20px 0;
         }
-        .container {
-            padding: 20px;
-        }
         .features, .pricing, .contact {
-            background-color: #fff;
+            background-color: #ffffff;
             border-radius: 8px;
             margin-bottom: 20px;
             padding: 20px;
@@ -56,19 +49,20 @@
         }
         .features h2, .pricing h2, .contact h2 {
             margin-top: 0;
+            font-weight: 700;
         }
         .features ul {
             list-style: none;
             padding: 0;
         }
         .features li {
-            background: #f4f4f4;
+            background: #e9ecef;
             margin: 10px 0;
             padding: 10px;
             border-radius: 4px;
         }
         .pricing .plan {
-            background: #f4f4f4;
+            background: #e9ecef;
             border-radius: 4px;
             margin: 10px 0;
             padding: 20px;
@@ -77,8 +71,8 @@
             margin-top: 0;
         }
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #343a40;
+            color: #ffffff;
             text-align: center;
             padding: 10px 0;
         }
@@ -86,17 +80,21 @@
 </head>
 <body>
     <header>
-        <h1>Stats.mf</h1>
-        <nav>
-            <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <div class="container">
+            <h1 class="text-center">Stats.mf</h1>
+            <nav class="text-center">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
     <section class="hero">
-        <h2>Unlock the Power of Your Music Data</h2>
-        <p>Track, analyze, and optimize your streaming stats like never before.</p>
+        <div class="container">
+            <h2>Unlock the Power of Your Music Data</h2>
+            <p>Track, analyze, and optimize your streaming stats like never before.</p>
+        </div>
     </section>
 
     <div class="container">
@@ -141,5 +139,10 @@
     <footer>
         <p>&copy; 2024 Stats.mf. All rights reserved.</p>
     </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
