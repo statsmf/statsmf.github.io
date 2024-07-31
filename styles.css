@@ -1,16 +1,17 @@
-/* Global Styles */
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1a1a1a, #333333); /* Gradient Background */
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Light text color */
     overflow-x: hidden;
 }
 
-/* Header */
+/* Header Styling */
 header {
     position: relative;
     height: 50vh; /* Adjusted to take up half the screen height */
+    width: 100vw; /* Full screen width */
     background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
     color: #ffffff;
     display: flex;
@@ -18,29 +19,38 @@ header {
     justify-content: center;
     text-align: center;
     z-index: 1;
+    position: relative;
 }
 
+/* Logo Styling */
 header h1 {
     margin: 0;
-    font-size: 6em;
+    font-size: 6em; /* Increased size */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-    animation: float 3s ease-in-out infinite;
+    animation: floating 5s ease-in-out infinite; /* Floating effect */
 }
 
-/* Tabs */
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Tabs Styling */
 .nav-tabs {
-    display: flex;
-    justify-content: center; /* Center tabs */
     margin-top: 20px;
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    bottom: 0; /* Positioned directly below the h1 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-link {
-    color: #ffffff !important;
-    background-color: transparent !important;
+    color: #e0e0e0 !important;
+    background-color: #333 !important; /* Dark background for tabs */
     border: none;
     border-radius: 0;
     margin: 0 10px;
@@ -48,6 +58,7 @@ header h1 {
     font-size: 1.2em;
     font-family: 'Montserrat', sans-serif;
     transition: color 0.3s ease, transform 0.3s ease;
+    text-transform: lowercase;
 }
 
 .nav-link.active {
@@ -55,42 +66,32 @@ header h1 {
     transform: scale(1.2);
 }
 
-/* Tab Content */
 .tab-content {
     padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent dark background */
+    background-color: #1e1e1e; /* Dark background for content */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-top: -60px; /* To overlap the header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
     position: relative;
     z-index: 2;
 }
 
-/* Tab Pane */
 .tab-pane {
-    opacity: 1; /* Removed fade effect */
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
 }
 
-/* Sections */
+.tab-pane.active {
+    opacity: 1;
+}
+
+/* Section Styling */
 .features, .pricing, .contact {
-    background-color: #1e1e1e; /* Dark background for sections */
+    background-color: #1e1e1e; /* Dark background */
     border-radius: 8px;
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Feature and Pricing items */
-.features li, .pricing .plan {
-    background: #333333;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.features li:hover, .pricing .plan:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .features h2, .pricing h2, .contact h2 {
@@ -100,7 +101,46 @@ header h1 {
     color: #039be5;
 }
 
-/* Contact Form */
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    background: #333;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.pricing .plan {
+    background: #333;
+    border-radius: 8px;
+    margin: 10px 0;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pricing .plan:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.pricing .plan h3 {
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #039be5;
+}
+
 .contact form {
     display: flex;
     flex-direction: column;
@@ -111,8 +151,8 @@ header h1 {
     padding: 10px;
     border-radius: 4px;
     border: 1px solid #444;
-    background: #333;
-    color: #ffffff;
+    background-color: #333;
+    color: #e0e0e0;
 }
 
 .contact button {
@@ -129,7 +169,7 @@ header h1 {
     background-color: #0288d1;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
     background-color: #263238;
     color: #ffffff;
@@ -138,50 +178,42 @@ footer {
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Profile Button */
+/* Profile Button Styling */
 .profile-btn {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #1e1e1e;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
     border: none;
     border-radius: 50%;
-    padding: 10px;
-    font-size: 1.5em;
-    color: #ffffff;
+    color: #e0e0e0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease, transform 0.3s ease;
-    z-index: 10;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .profile-btn:hover {
-    background: #333;
-    transform: rotate(360deg);
+    background-color: #444;
+    transform: rotate(360deg); /* Spinning effect */
 }
 
-/* Dropdown Menu */
+/* Dropdown Menu Styling */
 .dropdown-menu {
-    background: #1e1e1e;
-    border-radius: 8px;
+    background-color: #333;
     border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-item {
-    color: #ffffff;
+    color: #e0e0e0;
     transition: background-color 0.3s ease;
 }
 
 .dropdown-item:hover {
-    background-color: #333;
-}
-
-/* Animations */
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+    background-color: #444;
 }
