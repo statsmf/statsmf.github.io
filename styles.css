@@ -18,7 +18,6 @@ header {
     justify-content: center;
     text-align: center;
     z-index: 1;
-    position: relative;
 }
 
 header h1 {
@@ -65,16 +64,11 @@ header h1 {
     margin-top: -60px; /* To overlap the header */
     position: relative;
     z-index: 2;
-    animation: fadeIn 3s ease-in-out infinite;
 }
 
+/* Tab Pane */
 .tab-pane {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.tab-pane.active {
-    opacity: 1;
+    opacity: 1; /* Removed fade effect */
 }
 
 /* Sections */
@@ -166,6 +160,7 @@ footer {
     transform: rotate(360deg);
 }
 
+/* Dropdown Menu */
 .dropdown-menu {
     background: #1e1e1e;
     border-radius: 8px;
@@ -189,19 +184,4 @@ footer {
     50% {
         transform: translateY(-10px);
     }
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 100% 100%; }
-    100% { background-position: 0% 0%; }
 }
