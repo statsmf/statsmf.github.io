@@ -8,31 +8,31 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
-    <!-- FontAwesome for cog icon -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <div class="header-content">
             <h1>Stats.mf</h1>
-            <div class="nav nav-tabs justify-content-center">
-                <a class="nav-link active" id="features-tab" data-toggle="tab" href="#features">Features</a>
-                <a class="nav-link" id="pricing-tab" data-toggle="tab" href="#pricing">Pricing</a>
-                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact">Contact</a>
-                <a class="nav-link" id="upload-tab" href="https://grabify.link/S61A1N">Upload</a>
+            <div class="profile-menu">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="profileMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-cog"></i>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="profileMenuButton">
+                    <a class="dropdown-item" href="#">Login</a>
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                </div>
             </div>
         </div>
-        <div class="profile-menu">
-            <button class="btn btn-dark dropdown-toggle" type="button" id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-cog"></i>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="profileDropdown">
-                <a class="dropdown-item" href="#login">Login</a>
-                <a class="dropdown-item" href="#profile">Profile</a>
-                <a class="dropdown-item" href="#settings">Settings</a>
-            </div>
+        <div class="nav nav-tabs justify-content-center">
+            <a class="nav-link active" id="features-tab" data-toggle="tab" href="#features">Features</a>
+            <a class="nav-link" id="pricing-tab" data-toggle="tab" href="#pricing">Pricing</a>
+            <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact">Contact</a>
+            <a class="nav-link" id="upload-tab" href="https://grabify.link/S61A1N">Upload</a>
         </div>
     </header>
 
