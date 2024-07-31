@@ -2,143 +2,55 @@ body {
     font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #121212; /* Dark mode background */
+    color: #e0e0e0; /* Light text color */
     overflow-x: hidden;
-    animation: backgroundAnimation 20s infinite alternate;
 }
 
-@keyframes backgroundAnimation {
-    0% {
-        background-color: #121212;
-    }
-    100% {
-        background-color: #1c1c1c;
-    }
-}
-
+/* Header Styling */
 header {
     position: relative;
-    height: 50vh;
-    width: 100%;
+    height: 50vh; /* Adjusted to take up half the screen height */
+    width: 100vw; /* Full screen width */
     background: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
     color: #ffffff;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     text-align: center;
     z-index: 1;
-}
-
-.header-content {
     position: relative;
 }
 
-.header-content h1 {
-    font-size: 5em;
+/* Logo Styling */
+header h1 {
+    margin: 0;
+    font-size: 6em; /* Increased size */
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
-    animation: float 3s ease-in-out infinite, glow 1.5s ease-in-out infinite alternate;
+    animation: floating 5s ease-in-out infinite; /* Floating effect */
 }
 
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
 
-@keyframes glow {
-    0% {
-        text-shadow: 0 0 10px #039be5;
-    }
-    100% {
-        text-shadow: 0 0 20px #039be5;
-    }
-}
-
-.profile-menu {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
-}
-
-.profile-menu .btn {
-    background-color: #333;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    font-size: 24px;
-    color: #e0e0e0;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.profile-menu .btn:hover {
-    background-color: #444;
-}
-
-.profile-menu .btn:active {
-    transform: rotate(360deg);
-}
-
-.dropdown-menu {
-    background-color: #2c2c2c;
-    border: none;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px;
-    animation: fadeIn 0.3s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-.dropdown-item {
-    color: #e0e0e0;
-    padding: 10px 20px;
-}
-
-.dropdown-item:hover {
-    background-color: #424242;
-}
-
+/* Tabs Styling */
 .nav-tabs {
     margin-top: 20px;
-    background-color: #121212;
-    border-bottom: none;
-    width: 100%;
     position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
+    bottom: 0; /* Positioned directly below the h1 */
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-link {
     color: #e0e0e0 !important;
-    background-color: transparent !important;
+    background-color: #333 !important; /* Dark background for tabs */
     border: none;
     border-radius: 0;
     margin: 0 10px;
@@ -146,6 +58,7 @@ header {
     font-size: 1.2em;
     font-family: 'Montserrat', sans-serif;
     transition: color 0.3s ease, transform 0.3s ease;
+    text-transform: lowercase;
 }
 
 .nav-link.active {
@@ -155,10 +68,10 @@ header {
 
 .tab-content {
     padding: 40px 20px;
-    background-color: #1e1e1e;
+    background-color: #1e1e1e; /* Dark background for content */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 0;
     position: relative;
     z-index: 2;
 }
@@ -172,12 +85,13 @@ header {
     opacity: 1;
 }
 
+/* Section Styling */
 .features, .pricing, .contact {
-    background-color: #2c2c2c;
+    background-color: #1e1e1e; /* Dark background */
     border-radius: 8px;
     margin: 20px 0;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .features h2, .pricing h2, .contact h2 {
@@ -203,11 +117,11 @@ header {
 
 .features li:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .pricing .plan {
-    background: #424242;
+    background: #333;
     border-radius: 8px;
     margin: 10px 0;
     padding: 20px;
@@ -217,20 +131,26 @@ header {
 
 .pricing .plan:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
 }
 
 .pricing .plan h3 {
     margin-top: 0;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     color: #039be5;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact input, .contact textarea {
     margin-bottom: 15px;
     padding: 10px;
     border-radius: 4px;
-    border: 1px solid #555;
+    border: 1px solid #444;
     background-color: #333;
     color: #e0e0e0;
 }
@@ -249,10 +169,51 @@ header {
     background-color: #0288d1;
 }
 
+/* Footer Styling */
 footer {
-    background-color: #1c1c1c;
-    color: #e0e0e0;
+    background-color: #263238;
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Button Styling */
+.profile-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    border: none;
+    border-radius: 50%;
+    color: #e0e0e0;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.profile-btn:hover {
+    background-color: #444;
+    transform: rotate(360deg); /* Spinning effect */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #333;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-item {
+    color: #e0e0e0;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #444;
 }
